@@ -1,0 +1,62 @@
+@import "../../../scss-variables/variables";
+@import "../../../scss-variables/mixins";
+
+.blog {
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 52px 0px;
+
+    .blogContainer {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        row-gap: 70px;
+        gap: 17px;
+
+        .containerTop {
+            width: 22.8%;
+            height: 323px;
+            background: #353535;
+            border-radius: 17px;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            .blogImg {
+                img {
+
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .blogInfo {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 29%;
+                padding-left: 10px;
+
+                .blogText {
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 17px;
+                }
+
+                .blogTxt {
+                    font-size: 13.5px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,4 +1,6 @@
 import { Blogcont } from "./blogcontainer";
+import style from "./design/style.module.css"
+
 const blogimg = [
   require("../../img/blog1.svg").default,
   require("../../img/blog2.svg").default,
@@ -10,8 +12,8 @@ export function Blog() {
   return (
     console.log(blogimg),
     (
-      <main className="blog">
-        <section className="blog-container">
+      <main className={style.blog}>
+        <section className={style.blogContainer}>
         <Blogcont img={blogimg[0]}>
           {"There is more than you know"}
           {

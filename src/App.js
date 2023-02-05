@@ -8,48 +8,21 @@ import { Blog } from "./components/main/blog/blog";
 import { Journey } from "./components/main/journey/journey";
 import { Footer } from "./components/footer/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {  useState } from "react";
+import { useState } from "react";
 
 function App() {
-const [list ,setList]=useState("main")
+  const [list, setList] = useState("main");
 
-// const [windowSize, setWindowSize] = useState(getWindowSize());
-
-
-// useEffect(() => {
-//   function handleWindowResize() {
-//     setWindowSize(getWindowSize());
-//   }
-
-//   window.addEventListener('resize', handleWindowResize);
-
-//   return () => {
-//     window.removeEventListener('resize', handleWindowResize);
-//   };
-// }, []);
-
-
-// function getWindowSize() {
-//   const {innerWidth, innerHeight} = window;
-//   return {innerWidth, innerHeight};
-// }
-
-
-
-
-
-
-
-function listSelected (list){
-  setList(list)
-}
+  function listSelected(list) {
+    setList(list);
+  }
 
   return (
     <>
       <BrowserRouter>
-        <Header diff={list}   listClick={listSelected} list={list} />
+        <Header text={list} listClick={listSelected} list={list} />
         <Routes>
-          <Route  index element={<Main />} />
+          <Route index element={<Main />} />
           <Route path="/Main" index element={<Main />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />

@@ -1,0 +1,118 @@
+@import "../../../scss-variables/variables";
+@import "../../../scss-variables/mixins";
+
+
+.main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 0px;
+    // height: 694px;
+    row-gap: 35px;
+    background: black;
+    color: white;
+
+    @include mobile {
+        height: 88.282%;
+        // height: 87.6%;
+        padding: 14% 0px 0px;
+
+    }
+
+    .mainContainer {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 31px;
+        position: relative;
+        // justify-content: center;
+        // height: 100%;
+        height: 594px;
+
+        @include mobile {
+            height: auto;
+        }
+
+        .mainContainerTop {
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 77px;
+            text-align: center;
+            margin-top: 55px;
+
+            @include mobile {
+                z-index: 2;
+                font-size: 44px;
+                margin-top: 81px;
+            }
+        }
+
+       .mainContainerText {
+            width: 41%;
+            height: 85px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+
+            @include mobile {
+                width: 100%;
+                height: 22%;
+            }
+        }
+
+        .mainContainerBtn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            .btn1 {
+                width: 113px;
+                height: 49px;
+                border: none;
+                background: #FDB827;
+                border-radius: 8px;
+                justify-content: center;
+            }
+
+            .btn2 {
+                width: 198px;
+                height: 49px;
+                border: none;
+                background: rgb(21 19 19 / 63%);
+                border-radius: 8px;
+                color: white;
+            }
+        }
+
+        .mainImg1 {
+            position: absolute;
+            left: 5%;
+            top: -12%;
+
+            @include mobile {
+                z-index: 0;
+                width: 93%;
+                left: -90px;
+                top: -80px;
+            }
+        }
+
+        .mainImg2 {
+            position: absolute;
+            right: 0;
+            bottom: -8.4%;
+
+            @include mobile {
+                display: none;
+            }
+
+        }
+
+    }
+
+
+}

@@ -1,0 +1,100 @@
+@import "../../../scss-variables/variables";
+@import "../../../scss-variables/mixins";
+
+.contact {
+    background: black;
+    padding: 86px 30px;
+
+    .contactContainer {
+        display: flex;
+
+        .contactLeft {
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .contactRight {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+
+            @include mobile {
+                row-gap: 108px;
+            }
+
+            .rightCont {
+                display: flex;
+                flex-direction: column;
+
+                .contactText {
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    color: white;
+
+                    .name {
+
+                        font-size: 48px;
+                        line-height: 58px;
+                        width: 44%;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
+                    .list {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 13px;
+                        font-size: 16px;
+                        line-height: 19px;
+                        width: 40%;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+
+                        .listtext{
+                            font-size: 16px;
+                        }
+
+                        .lists{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .contactBtn {
+                display: flex;
+                width: 23%;
+                align-items: center;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                .btn1 {
+                    width: 44%;
+                    background: #FDB827;
+                    border-radius: 8px;
+                    padding: 12px 0px;
+                }
+
+                .btn2 {
+                    width: 56%;
+                    padding: 11px 0px;
+                    border-radius: 8px;
+                    background: rgba(255, 255, 255, 0.13);
+                    color: white;
+                }
+            }
+        }
+    }
+}

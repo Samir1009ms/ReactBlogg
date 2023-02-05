@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import style from "./design/style.module.css"
+
 
 export function List(props) {
   
 
-  const [isHover, setIsHover] = useState(false);
+  const [hover, setHover] = useState(false);
 
   const active = () => {
-    setIsHover(true);
+    setHover(true);
   };
 
   const deactive = () => {
-    setIsHover(false);
+    setHover(false);
   };
 
   const getTextColor = () => {
-    if (isHover) {
+    if (hover) {
       return "#ffd000";
     } else {
       if (props.listSelect) {
@@ -28,7 +30,7 @@ export function List(props) {
   };
 
   return (
-    <li name={props.nav} className="list-text">
+    <li name={props.nav} className={style.listText}>
       <Link
         onClick={() => props.listClick(props.nav)}
         onMouseEnter={active}

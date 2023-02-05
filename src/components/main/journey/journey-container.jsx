@@ -1,12 +1,13 @@
+import style from "./design/style.module.css"
 import { Text } from "./journey-text";
 import { Rcont } from "./journeyRcont";
 export function JourneyContLeft() {
   let imgx = [{ src: require("../../img/journey.svg").default }];
   return (
-    <div className="journey-left">
-      <div className="left-text">
+    <div className={style.journeyLeft}>
+      <div className={style.leftText}>
         <img src={imgx[0].src} alt="" />
-      <div className="top-text">
+      <div className={style.topText}>
       <Text class="name">
           The resolution, What am <br /> I gonna do?
         </Text>
@@ -17,7 +18,7 @@ export function JourneyContLeft() {
         </Text>
       </div>
       </div>
-      <div className="left-txt">
+      <div className={style.leftTxt}>
         <Text class="txt">
           The standard Lorem Ipsum passage, used since the 1500s <br />
           <br />
@@ -62,12 +63,12 @@ export function JourneyContLeft() {
 
 export function JourneyContRight() {
   return (
-    <div className="journey-right">
-      <Text class="right-name">Time Line</Text>
-      <select className="selected">
-        <option className="option" value="">2021</option>
-        <option className="option" value="">2022</option>
-        <option className="option" value="">2023</option>
+    <div className={style.journeyRight}>
+      <Text class={style.rightName}>Time Line</Text>
+      <select className={style.selected}>
+        <option className={style.option} value="">2021</option>
+        <option className={style.option} value="">2022</option>
+        <option className={style.option} value="">2023</option>
       </select>
       <Rcont
         date="2 January 2021"

@@ -1,13 +1,15 @@
+import style from "./design/style.module.css"
+
 export function Porto(props) {
   let companent = props.list;
   return companent.map((element, index) => (
-    <div className="porto-container" key={index}>
-      <div className="porto-top">
-        <img className="porto-img" src={element.src} alt="" />
+    <div className={style.portoContainer} key={index}>
+      <div className={style.portoTop}>
+        <img className={style.portoImg} src={element.src} alt="" />
       </div>
-      <div className="porto-bottom">
-        <p className="porto-text" >{element.text}</p>
-        <p className="porto-txt">{element.txt}</p>
+      <div className={style.portoBottom}>
+        <p className={style.portoText} >{element.text}</p>
+        <p className={style.portoTxt}>{element.txt}</p>
       </div>
     </div>
   ));

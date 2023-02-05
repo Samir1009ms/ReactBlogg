@@ -1,26 +1,27 @@
-import { Container } from "../home/main-container";
+import { Container } from "./about-container";
 import { AboutImg } from "./photos";
 import { Img } from "./img";
+import style from "./design/style.module.css"
 
 export function About() {
   let Aboutimg = AboutImg;
   return (
-    <section className="about">
-      <div className="about-top">
-        <Img class="about-iimg" img={Aboutimg}></Img>
-        <Container class="about-txt">
+    <section className={style.about}>
+      <div className={style.aboutTop}>
+        <Img  img={Aboutimg}></Img>
+        <Container class="aboutTxt">
           I’m Amirhossein Meydani <br /> A
-          <span className="text-yellow">Backend</span> and
-          <span className="text-yellow">Android</span> <br /> Programmer and
-          <span className="text-yellow">UI/UX</span> <br />
+          <span className={style.textYellow}>Backend</span> and
+          <span className={style.textYellow}>Android</span> <br /> Programmer and
+          <span className={style.textYellow}>UI/UX</span> <br />
           Designer
         </Container>
       </div>
-      <div className="about-bottom">
-        <Container class="about-bottom-text">
+      <div className={style.aboutBottom}>
+        <Container class="bottomText">
           The standard Lorem Ipsum passage, used since the 1500s
         </Container>
-        <Container class="about-bottom-text">
+        <Container class="bottomText">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -29,11 +30,11 @@ export function About() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
         </Container>
-        <Container class="about-bottom-text">
+        <Container class="bottomText">
           Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero
           in 45 BC
         </Container>
-        <Container class="about-bottom-text">
+        <Container class="bottomText">
           "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -48,10 +49,10 @@ export function About() {
           ea voluptate velit esse quam nihil molestiae consequatur, vel illum
           qui dolorem eum fugiat quo voluptas nulla pariatur?"
         </Container>
-        <Container class="about-bottom-text">
+        <Container class="bottomText">
           1914 translation by H. Rackham
         </Container>
-        <Container class="about-bottom-text">
+        <Container class="bottomText">
           "But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete
           account of the system, and expound the actual teachings of the great

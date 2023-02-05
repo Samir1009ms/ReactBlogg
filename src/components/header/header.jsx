@@ -1,36 +1,23 @@
 import { navlist } from "./s";
 import { List } from "./list";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import style from "./design/style.module.css"
 
 export function Header(props) {
   const [display, setDisplay] = useState(false);
+  const navRef=useRef()
   const   iconCkick =()=> {
     setDisplay(!display);
 
-    if (display) {
-      return "block";
-
-    } else {
-      return "none";
-    }
+    navRef.current.classList.toggle("d")
   }
 
-    // if(props.width.innerWidth>992){
-    // console.log("block")
-
-    
-    // }else{
-    //   console.log("none")
-    
-    // }
-  
-    // console.log(props.width);
   
   
 
   return (
-    <header className="header">
-      <ul className="list" onLoad={Header} style={{display: display? "none": "flex" }}>
+    <header className={style.header}>
+      <ul ref={navRef} className={style.list} >
         {navlist.map((element) => (
           <List
             listSelect={props.list === element}
@@ -40,14 +27,14 @@ export function Header(props) {
         ))}
       </ul>
       {/* mobil list click name  */}
-      <div className="mobilList">
+      <div className={style.mobilList}>
         <img
           onClick={iconCkick}
-          className="menuIcon"
+          className={style.menuIcon}
           src={require("../img/menu-svgrepo-com.svg").default}
           alt=""
         />
-        <p className="text"> {props.diff}</p>
+        <p className={style.text}> {props.text}</p>
       </div>
     </header>
   );

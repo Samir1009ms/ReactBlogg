@@ -1,0 +1,85 @@
+.contact {
+  background: black;
+  padding: 86px 30px;
+}
+.contact .contactContainer {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .contact .contactContainer .contactLeft {
+    display: none;
+  }
+}
+.contact .contactContainer .contactRight {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .contact .contactContainer .contactRight {
+    row-gap: 108px;
+  }
+}
+.contact .contactContainer .contactRight .rightCont {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contactContainer .contactRight .rightCont .contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+.contact .contactContainer .contactRight .rightCont .contactText .name {
+  font-size: 48px;
+  line-height: 58px;
+  width: 44%;
+}
+@media (max-width: 767px) {
+  .contact .contactContainer .contactRight .rightCont .contactText .name {
+    width: 100%;
+  }
+}
+.contact .contactContainer .contactRight .rightCont .contactText .list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  font-size: 16px;
+  line-height: 19px;
+  width: 40%;
+}
+@media (max-width: 767px) {
+  .contact .contactContainer .contactRight .rightCont .contactText .list {
+    width: 100%;
+  }
+}
+.contact .contactContainer .contactRight .rightCont .contactText .list .listtext {
+  font-size: 16px;
+}
+.contact .contactContainer .contactRight .rightCont .contactText .list .lists {
+  font-size: 16px;
+}
+.contact .contactContainer .contactRight .contactBtn {
+  display: flex;
+  width: 23%;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .contact .contactContainer .contactRight .contactBtn {
+    width: 100%;
+  }
+}
+.contact .contactContainer .contactRight .contactBtn .btn1 {
+  width: 44%;
+  background: #FDB827;
+  border-radius: 8px;
+  padding: 12px 0px;
+}
+.contact .contactContainer .contactRight .contactBtn .btn2 {
+  width: 56%;
+  padding: 11px 0px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.13);
+  color: white;
+}/*# sourceMappingURL=style.module.css.map */

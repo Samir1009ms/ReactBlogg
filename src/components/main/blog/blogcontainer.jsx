@@ -1,12 +1,15 @@
+import style from "./design/style.module.css"
+
+
 export function Blogcont(props) {
   return (
-    <div className="blog-container-top">
-      <div className="blog-img">
+    <div className={style.containerTop}>
+      <div className={style.blogImg}>
         <img src={props.img} alt="" />
       </div>
-      <div className="blog-info">
-        <p className="blog-text">{props.children[0]}</p>
-        <p className="blog-txt">{props.children[1]}</p>
+      <div className={style.blogInfo}>
+        <p className={style.blogText}>{props.children[0]}</p>
+        <p className={style.blogTxt}>{props.children[1]}</p>
       </div>
     </div>
   );

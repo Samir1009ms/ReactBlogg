@@ -1,0 +1,136 @@
+.journey {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  padding: 34px 0px;
+}
+.journey .journeyContainer {
+  display: flex;
+  width: 90%;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer {
+    flex-direction: column-reverse;
+  }
+}
+.journey .journeyContainer .journeyLeft {
+  width: 80%;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyLeft {
+    width: 100%;
+  }
+}
+.journey .journeyContainer .journeyLeft .leftText {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyLeft .leftText {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyLeft .leftText img {
+    display: none;
+  }
+}
+.journey .journeyContainer .journeyLeft .leftText .topText .name {
+  font-size: 48px;
+  line-height: 58px;
+}
+.journey .journeyContainer .journeyLeft .leftText .topText .text {
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.45);
+}
+.journey .journeyContainer .journeyLeft .leftTxt .txt {
+  font-size: 16px;
+  line-height: 17px;
+}
+.journey .journeyContainer .journeyRight {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyRight {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.journey .journeyContainer .journeyRight .rightName {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyRight .rightName {
+    width: 100%;
+    text-align: start;
+  }
+}
+.journey .journeyContainer .journeyRight .selected {
+  width: 191px;
+  height: 42px;
+  border-radius: 8px;
+  background: none;
+  color: white;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyRight .selected {
+    display: none;
+  }
+}
+.journey .journeyContainer .journeyRight .selected .option {
+  background: black;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyRight .table {
+    width: 48%;
+  }
+}
+.journey .journeyContainer .journeyRight .table .date {
+  font-size: 11px;
+  line-height: 13px;
+  color: rgba(255, 255, 255, 0.56);
+}
+.journey .journeyContainer .journeyRight .table .cont {
+  width: 200px;
+  height: 88px;
+  background: rgba(253, 184, 39, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 9px;
+  margin-top: 10px;
+  padding-top: 13px;
+  padding-left: 10px;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyRight .table .cont {
+    width: auto;
+    height: auto;
+    padding-bottom: 10px;
+  }
+}
+.journey .journeyContainer .journeyRight .table .cont .top {
+  font-size: 16px;
+  line-height: 15px;
+}
+@media (max-width: 767px) {
+  .journey .journeyContainer .journeyRight .table .cont .top {
+    margin-bottom: 10px;
+  }
+}
+.journey .journeyContainer .journeyRight .table .cont .bottom {
+  font-size: 15px;
+  line-height: 13px;
+  color: rgba(255, 255, 255, 0.56);
+}/*# sourceMappingURL=style.module.css.map */

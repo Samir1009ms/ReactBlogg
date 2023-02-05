@@ -1,0 +1,166 @@
+@import "../../../scss-variables/variables";
+@import "../../../scss-variables/mixins";
+
+.journey {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    padding: 34px 0px;
+
+    .journeyContainer {
+        display: flex;
+        width: 90%;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+
+        .journeyLeft {
+            width: 80%;
+
+            @include mobile {
+                width: 100%;
+            }
+
+
+            .leftText {
+                display: flex;
+
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+
+                }
+
+                img {
+                    @include mobile {
+                        display: none;
+                    }
+                }
+
+                .topText {
+
+                    .name {
+                        font-size: 48px;
+                        line-height: 58px;
+                    }
+
+                    .text {
+                        font-size: 14px;
+                        line-height: 17px;
+
+                        color: rgba(255, 255, 255, 0.45);
+                    }
+                }
+            }
+
+            .leftTxt {
+
+                .txt {
+                    font-size: 16px;
+                    line-height: 17px;
+                }
+            }
+        }
+
+        .journeyRight {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            @include mobile {
+                width: 100%;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            .rightName {
+                font-size: 25px;
+                line-height: 30px;
+                text-align: center;
+
+                @include mobile {
+                    width: 100%;
+                    text-align: start;
+                }
+
+                // color: #FFFFFF;
+            }
+
+            .selected {
+                width: 191px;
+                height: 42px;
+                // border: 0.3px solid #FFFFFF;
+                border-radius: 8px;
+                background: none;
+                color: white;
+
+                @include mobile {
+                    display: none;
+                }
+
+                .option {
+                    background: black;
+
+                }
+            }
+
+            .table {
+
+                @include mobile {
+                    width: 48%;
+                }
+
+                .date {
+                    font-size: 11px;
+                    line-height: 13px;
+
+                    color: rgba(255, 255, 255, 0.56);
+                }
+
+                .cont {
+
+                    width: 200px;
+                    height: 88px;
+                    background: rgba(253, 184, 39, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.35);
+                    border-radius: 9px;
+                    margin-top: 10px;
+                    padding-top: 13px;
+                    padding-left: 10px;
+
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                        padding-bottom: 10px;
+                    }
+
+                    .top {
+                        font-size: 16px;
+                        line-height: 15px;
+
+                        @include mobile {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .bottom {
+                        font-size: 15px;
+                        line-height: 13px;
+
+                        color: rgba(255, 255, 255, 0.56);
+                    }
+                }
+            }
+        }
+
+    }
+}

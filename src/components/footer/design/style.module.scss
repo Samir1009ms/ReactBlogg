@@ -1,0 +1,39 @@
+@import "../../scss-variables/variables";
+@import "../../scss-variables/mixins";
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // position: fixed;
+    z-index: 22;
+    color: white;
+    bottom: 9px;
+    padding: 0px 20px;
+    font-size: 12px;
+    line-height: 15px;
+    background: #000;
+    height: 50px;
+    align-items: center;
+
+    @include mobile {
+
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .icons {
+
+        @include mobile {
+            order: -1;
+            display: flex;
+        }
+    }
+
+    .footerText{
+    color: white;
+    
+    }
+}
