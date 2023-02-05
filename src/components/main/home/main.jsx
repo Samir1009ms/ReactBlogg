@@ -1,6 +1,7 @@
 import { Container } from "./main-container";
 import {Button} from "./button"
 import { Img } from "./imgcont";
+
 import { MainImgs } from "../about/photos"; 
 import style from "./design/style.module.css"
 export function Main() {
