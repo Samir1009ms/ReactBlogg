@@ -18,11 +18,12 @@ export function Header(props) {
   return (
     <header className={style.header}>
       <ul ref={navRef} className={style.list} >
-        {navlist.map((element) => (
+        {navlist.map((element,index) => (
           <List
             listSelect={props.list === element}
             listClick={props.listClick}
             nav={element}
+            key={index}
           />
         ))}
       </ul>
