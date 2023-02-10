@@ -25,6 +25,13 @@
     }
 
     .icons {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        .icon {
+            // background: white;
+            // border-radius: 50%;
+        }
 
         @include mobile {
             order: -1;
@@ -32,8 +39,8 @@
         }
     }
 
-    .footerText{
-    color: white;
-    
+    .footerText {
+        color: white;
+
     }
 }

@@ -19,6 +19,11 @@
     gap: 2px;
   }
 }
+.footer .icons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
 @media (max-width: 767px) {
   .footer .icons {
     order: -1;
