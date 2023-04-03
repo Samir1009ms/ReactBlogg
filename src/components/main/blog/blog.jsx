@@ -1,6 +1,6 @@
 import { Blogcont } from "./blogcontainer";
 import style from "./design/style.module.css"
-
+import { useEffect } from "react";
 const blogimg = [
   require("../../img/blog1.svg").default,
   require("../../img/blog2.svg").default,
@@ -8,7 +8,12 @@ const blogimg = [
   require("../../img/blog4.svg").default,
   require("../../img/blog5.svg").default,
 ];
-export function Blog() {
+export function Blog({listTexts}) {
+
+  // const tt="Blog"
+  // useEffect(() => {
+  //   listTexts(tt)
+  // },[]);
   return (
     console.log(blogimg),
     (

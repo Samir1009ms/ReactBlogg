@@ -1,18 +1,25 @@
 import { Container } from "./about-container";
 import { AboutImg } from "./photos";
 import { Img } from "./img";
-import style from "./design/style.module.css"
+import style from "./design/style.module.css";
+import { useEffect } from "react";
 
-export function About() {
+export function About({listTexts}) {
+  const tt="About"
+  useEffect(() => {
+    listTexts(tt)
+  },[]);
+
   let Aboutimg = AboutImg;
   return (
     <section className={style.about}>
       <div className={style.aboutTop}>
-        <Img  img={Aboutimg}></Img>
+        <Img img={Aboutimg}></Img>
         <Container class="aboutTxt">
           I’m Amirhossein Meydani <br /> A
           <span className={style.textYellow}>Backend</span> and
-          <span className={style.textYellow}>Android</span> <br /> Programmer and
+          <span className={style.textYellow}>Android</span> <br /> Programmer
+          and
           <span className={style.textYellow}>UI/UX</span> <br />
           Designer
         </Container>
@@ -49,9 +56,7 @@ export function About() {
           ea voluptate velit esse quam nihil molestiae consequatur, vel illum
           qui dolorem eum fugiat quo voluptas nulla pariatur?"
         </Container>
-        <Container class="bottomText">
-          1914 translation by H. Rackham
-        </Container>
+        <Container class="bottomText">1914 translation by H. Rackham</Container>
         <Container class="bottomText">
           "But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete

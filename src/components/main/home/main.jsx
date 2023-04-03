@@ -4,7 +4,14 @@ import { Img } from "./imgcont";
 
 import { MainImgs } from "../about/photos"; 
 import style from "./design/style.module.css"
-export function Main() {
+import { useEffect } from "react";
+export function Main({listTexts}) {
+   const tt="Main"
+  useEffect(() => {
+    listTexts(tt)
+  },[]);
+
+
   let Mainimg=MainImgs
   return (
     <main className={style.main}>

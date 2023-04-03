@@ -1,10 +1,17 @@
 import { Div } from "./contact-container";
 import { Button } from "./Contactbutton"
 import style from "./design/style.module.css"
+import { useEffect } from "react";
+
+
 
 let photo = [{ id: 0, src: require("../../img/control.svg").default }];
-export function Contact() {
+export function Contact({listTexts}) {
   let classlar = ["lists", "listtext", "list", "name", "contactText"];
+  const tt="Contact"
+  useEffect(() => {
+    listTexts(tt)
+  },[]);
 
   return (
     <main className={style.contact}>

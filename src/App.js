@@ -11,34 +11,32 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [list, setList] = useState("main");
+  let [list, setList] = useState();
 
-  function listSelected(list) {
+ function listSelected(list) {
     setList(list);
+    // console.log(list);
   }
+
+
+
 
   return (
     <>
       <BrowserRouter>
         <Header text={list} listClick={listSelected} list={list} />
         <Routes>
-          <Route index element={<Main />} />
-          <Route path="/Main" index element={<Main />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Portfolios" element={<Portfolios />} />
-          <Route path="/Journey" element={<Journey />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route index  element={<Main listTexts={listSelected}></Main>} />
+          <Route path="/Main" element={<Main listTexts={listSelected}></Main>} />
+          <Route path="/About"  element={<About listTexts={listSelected} ></About>} />
+          <Route path="/Contact"  element={<Contact listTexts={listSelected} />} />
+          <Route path="/Portfolios" element={<Portfolios listTexts={listSelected} />} />
+          <Route path="/Journey" element={<Journey listTexts={listSelected} />} />
+          <Route path="/Blog"  element={<Blog listTexts={listSelected} />} />
         </Routes>
 
         <Footer />
       </BrowserRouter>
-      {/* <Main />
-      <About />
-      <Contact />
-      <Portfolios />
-      <Journey />   
-      <Blog /> */}
     </>
   );
 }

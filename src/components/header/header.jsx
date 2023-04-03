@@ -1,6 +1,6 @@
 import { navlist } from "./s";
 import { List } from "./list";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "./design/style.module.css"
 
 export function Header(props) {
@@ -11,8 +11,19 @@ export function Header(props) {
 
     navRef.current.classList.toggle("d")
   }
-
+  let [l,setL]=useState(props.text)
   
+    function  sx (){
+    setL(l)
+    
+  }
+  let v = props.text
+  useEffect(()=>{
+  
+  sx(v)
+  },[])
+  console.log(v);
+
   
 
   return (
@@ -35,7 +46,7 @@ export function Header(props) {
           src={require("../img/menu-svgrepo-com.svg").default}
           alt=""
         />
-        <p className={style.text}> {props.text}</p>
+        <p onSubmit={()=>sx(v)} className={style.text}> {v}</p>
       </div>
     </header>
   );
